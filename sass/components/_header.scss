@@ -26,14 +26,38 @@
                         font-size: fs.$md;
                         color: c.$black;
                         font-weight: 300;
+                        transition: all 0.2s;
+                    }
+                }
+
+                &:nth-child(2){
+                    margin: 0 2rem;
+
+                    a{
+                        cursor:default;
+                    }
+                }
+
+                &:nth-child(1):hover,
+                &:nth-child(3):hover {
+                    a{
+                        p{
+                            font-size: fs.$lg;
+                            font-weight: 500;
+                            color: c.$secondary-color;
+                        }
                     }
                 }
                 
+                
             }
 
-            &__element:nth-child(2){
-                margin: 0 2rem;
-            }
+            
+
+            
+
+            
+            
         }
     }
 }
