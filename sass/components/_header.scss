@@ -6,24 +6,26 @@
     &__nav{
         position: sticky;
         z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 2rem;
         
 
         &__list{
             display: flex;
             padding: 0;
             margin: 0;
-            margin-left: 2rem;
             
             &__element{
                 list-style: none;
-               
 
                 a{
                     text-decoration: none;
                     
 
                     p{
-                        font-size: fs.$md;
+                        font-size: fs.$sm;
                         color: c.$black;
                         font-weight: 300;
                         transition: all 0.2s;
@@ -42,22 +44,34 @@
                 &:nth-child(3):hover {
                     a{
                         p{
-                            font-size: fs.$lg;
+                            font-size: fs.$md;
                             font-weight: 500;
                             color: c.$secondary-color;
                         }
                     }
                 }
-                
-                
             }
+        }
 
-            
 
-            
+        &__name{
+            p{
+                font-size: fs.$lg;
+                font-weight: 600;
+                color: c.$primary-color;
+            }
+        }
 
-            
-            
+        &__profile{
+
+            &__account{
+                display: flex;
+                gap: 1rem;
+                
+                img{
+                    transform: rotate(90deg);
+                }
+            }
         }
     }
 }
