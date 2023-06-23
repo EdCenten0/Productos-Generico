@@ -1,0 +1,36 @@
+@use '../variables/font-sizes' as fs;
+@use '../variables/colors' as c;
+
+.header{
+
+    &__nav{
+        position: sticky;
+        z-index: 1;
+        
+
+        &__list{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            gap: 2rem;
+            margin-left: 2rem;
+            
+            &__element{
+                list-style: none;
+               
+
+                a{
+                    text-decoration: none;
+                    
+
+                    p{
+                        font-size: fs.$md;
+                        color: c.$black;
+                        font-weight: 500;
+                    }
+                }
+                
+            }
+        }
+    }
+}
