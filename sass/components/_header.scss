@@ -5,12 +5,16 @@
 
     &__nav{
         position: sticky;
-        z-index: 1;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         align-items: center;
+        justify-items:center;
+        z-index: 1;
+        
         margin: 0 2rem;
         
+        
+
 
         &__list{
             display: flex;
@@ -44,7 +48,7 @@
                 &:nth-child(3):hover {
                     a{
                         p{
-                            font-size: fs.$md;
+                            transform: scale(1.2);
                             font-weight: 500;
                             color: c.$secondary-color;
                         }
@@ -59,17 +63,29 @@
                 font-size: fs.$lg;
                 font-weight: 600;
                 color: c.$primary-color;
+                cursor: pointer;
             }
         }
 
         &__profile{
 
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
             &__account{
                 display: flex;
                 gap: 1rem;
-                
+                cursor: pointer;
                 img{
                     transform: rotate(90deg);
+                    cursor: pointer;
+                }
+            }
+
+            &__logo{
+                img{
+                    width: 2rem;
                 }
             }
         }
