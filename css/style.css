@@ -65,14 +65,23 @@
 .main__banner_section {
   position: absolute;
   top: 0;
-  width: 100vw;
-  height: 99.4vh;
-}
-.main__banner_section img {
   width: 100%;
   height: 100%;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+.main__banner_section::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("../../src/photgrapher-image.jpg");
   background-image: rgb(0, 0, 0);
-  filter: blur(4px) brightness(70%) grayscale(70%);
+  filter: blur(2px) brightness(70%) grayscale(30%);
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
