@@ -83,5 +83,78 @@
   filter: blur(2px) brightness(70%) grayscale(30%);
   background-size: cover;
 }
+.main__banner_section__carousel__list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 30rem;
+  padding: 1rem 0;
+  margin: 0 auto;
+  max-width: 90vw;
+  overflow: hidden;
+}
+.main__banner_section__carousel__list__track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+}
+.main__banner_section__carousel__list__track__product {
+  position: relative;
+  width: 275px;
+  padding: 0 18px;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+}
+.main__banner_section__carousel__list__track__product p {
+  position: absolute;
+  z-index: 1;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #393E46;
+  padding: 15px;
+}
+.main__banner_section__carousel__list__track__product img {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+.main__banner_section__carousel__list__track__product img:hover {
+  opacity: 0.85;
+}
+.main__banner_section__carousel__list button {
+  border-radius: 30px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 4;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  border: 0;
+  cursor: pointer;
+}
+.main__banner_section__carousel__list button :focus {
+  outline: 0;
+}
+.main__banner_section__carousel__list button svg {
+  width: 12px;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.7);
+}
+.main__banner_section__carousel__list .slick-prev {
+  left: 0px;
+}
+.main__banner_section__carousel__list .slick-next {
+  right: 0px;
+}
 
 /*# sourceMappingURL=style.css.map */

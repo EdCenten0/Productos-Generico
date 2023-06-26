@@ -1,4 +1,4 @@
-
+@use '../variables/colors' as c;
 
 
 .main{
@@ -46,6 +46,102 @@
             filter: blur(2px) brightness(70%) grayscale(30%);
             background-size: cover;
         }
+
+        &__carousel{
+            
+            &__list{
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                height: 30rem;
+                padding: 1rem 0;
+                margin: 0 auto;
+                max-width: 90vw;
+                overflow: hidden;
+
+
+                &__track{
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    transition: .5s ease-in-out;
+
+                    &__product{
+                        position: relative;
+                        width: 275px;
+                        padding: 0 18px;
+                        float: left;
+                        box-sizing: border-box;
+                        display: flex;
+                        height: 100%;
+
+                        p{
+                            position: absolute;
+                            z-index: 1;
+                            font-size: 1.5rem;
+                            line-height: 1.5rem;
+                            color: c.$third-color;;
+                            padding: 15px;
+                        }
+
+                        img{
+                            object-fit: cover;
+                            height: 300px;
+                            width: 100%;
+                            border-radius: 4px;
+                            box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+                            transition: .3s ease-in-out;
+
+                        }
+
+                        & img:hover{
+                            opacity: .85;
+                        }
+                    }
+                }
+                
+                & button{
+                    border-radius: 30px;
+                    background-color: #fff;
+                    position: absolute;
+                    z-index: 4;
+                    width: 48px;
+                    height: 48px;
+                    text-align: center;
+                    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+                    border: 0;
+                    cursor: pointer;
+
+                    :focus{
+                        outline: 0;
+                    }
+
+                    svg{
+                        width: 12px;
+                        height: 100%;
+                        color: rgba(0,0,0,.7);
+                    }
+
+
+                }
+
+                .slick-prev{
+                    left: 0px;
+                }
+                .slick-next{
+                    right: 0px;
+                }
+
+                
+            }
+
+
+
+        }
+
         } 
         
         
