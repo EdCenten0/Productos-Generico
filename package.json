@@ -1,6 +1,6 @@
 {
 
-  
+  "type": "module",
   "dependencies": {
     "node": "^20.2.0",
     "node-fetch": "^3.3.1",
