@@ -3,6 +3,7 @@
 
 html{
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 body::-webkit-scrollbar{
@@ -12,6 +13,11 @@ body::-webkit-scrollbar{
 body::-webkit-scrollbar-thumb{
     background: c.$third-color;
     border-radius: 1rem;
+}
+
+body::-webkit-scrollbar-track{
+    border: 2px solid #b7b7b7;
+    border-radius: 12px;
 }
 
 *{
