@@ -2,22 +2,46 @@
 @use '../variables/colors' as c;
 
 .header{
-    position: sticky;
-    top: 10px;
+    position: fixed;
+    top: 0;
     z-index: 10;
-    &__nav{
-        
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        align-items: center;
-        justify-items:center;
-        z-index: 1;
-    
-        
-        margin: 0 2rem;
-        
-        
+    height: fit-content;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    right: 0; 
 
+    &__brightness{
+        background-color: c.$primary-color;
+        color: c.$black;
+        transition: all 0.5s ease-in;
+
+        .header__nav__name p{
+            color: c.$black;
+        }
+
+        .header__nav__list__element{
+            &:nth-child(1):hover,
+                &:nth-child(3):hover {
+                    a{
+                        p{
+                            transform: scale(1.2);
+                            font-weight: 500;
+                            color: #000000;
+                            border-bottom: 1px solid c.$black;
+                        }
+                    }
+                }
+        }
+        
+    }
+
+    &__nav{        
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        z-index: 1;
+        margin: 0 2rem;
 
         &__list{
             display: flex;
@@ -60,13 +84,14 @@
             }
         }
 
-
         &__name{
             p{
                 font-size: fs.$lg;
+                line-height: 0;
                 font-weight: 600;
                 color: c.$primary-color;
                 cursor: pointer;
+                margin: 0;
             }
         }
 

@@ -3,15 +3,33 @@
 }
 
 .header {
-  position: sticky;
-  top: 10px;
+  position: fixed;
+  top: 0;
   z-index: 10;
+  height: fit-content;
+  transition: all 0.5s;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header__brightness {
+  background-color: #F7F7F7;
+  color: #252525;
+  transition: all 0.5s ease-in;
+}
+.header__brightness .header__nav__name p {
+  color: #252525;
+}
+.header__brightness .header__nav__list__element:nth-child(1):hover a p, .header__brightness .header__nav__list__element:nth-child(3):hover a p {
+  transform: scale(1.2);
+  font-weight: 500;
+  color: #000000;
+  border-bottom: 1px solid #252525;
 }
 .header__nav {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: space-between;
   z-index: 1;
   margin: 0 2rem;
 }
@@ -45,9 +63,11 @@
 }
 .header__nav__name p {
   font-size: 2.4rem;
+  line-height: 0;
   font-weight: 600;
   color: #F7F7F7;
   cursor: pointer;
+  margin: 0;
 }
 .header__nav__profile {
   display: flex;
