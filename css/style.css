@@ -1,3 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #393E46;
+  border-radius: 1rem;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }
