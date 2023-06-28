@@ -10,11 +10,16 @@
     top: 0;
     left: 0;
     right: 0; 
+    
 
     &__brightness{
         background-color: c.$primary-color;
         color: c.$black;
         transition: all 0.5s ease-in;
+
+        .header__nav{      
+            margin: 0.5rem;
+        }
 
         .header__nav__name p{
             color: c.$black;
@@ -33,7 +38,6 @@
                     }
                 }
         }
-        
     }
 
     &__nav{        
@@ -42,6 +46,7 @@
         justify-content:space-between;
         z-index: 1;
         margin: 0 2rem;
+        transition: all 1s ease-in;
 
         &__list{
             display: flex;
@@ -60,6 +65,7 @@
                         color: c.$black;
                         font-weight: 300;
                         transition: all 0.2s;
+                        margin: 0;
                     }
                 }
 
@@ -91,7 +97,7 @@
                 font-weight: 600;
                 color: c.$primary-color;
                 cursor: pointer;
-                margin: 0;
+                margin: 5px;
             }
         }
 
