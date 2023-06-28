@@ -111,6 +111,11 @@
         }
         } 
 
+        .section1, 
+        .section2{
+           scroll-snap-align: center;
+           scroll-snap-stop: always;
+        }
 
         
     }

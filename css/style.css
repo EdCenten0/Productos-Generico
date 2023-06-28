@@ -206,5 +206,10 @@ body::-webkit-scrollbar-track {
 .main__banner_section__carousel__list .slick-next {
   right: 0px;
 }
+.main .section1,
+.main .section2 {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
 
 /*# sourceMappingURL=style.css.map */
