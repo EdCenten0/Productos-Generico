@@ -4,16 +4,16 @@
 const API = 'https://api.escuelajs.co/api/v1';
 
 function fetchData(urlAPI){
-    return window.fetch(urlAPI)
+    return window.fetch(urlAPI);
 }
 
 export async function getProducts(){
     return new Promise((resolve, reject) => {
         fetchData(`${API}/products`)
-        .then((response) => response.json())
-        .then((products) => {
-            resolve(products)})
-        .catch((err) => reject(err));
+            .then((response) => response.json())
+            .then((products) => {
+                resolve(products)})
+            .catch((err) => reject(err));
     })
 }
 
