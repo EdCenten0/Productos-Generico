@@ -175,10 +175,11 @@ body::-webkit-scrollbar-track {
 .main__banner_section__carousel__list__track__product p {
   position: absolute;
   z-index: 1;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.5rem;
   color: #393E46;
   padding: 15px;
+  text-shadow: 1px 0px #F7F7F7;
 }
 .main__banner_section__carousel__list__track__product img {
   object-fit: cover;

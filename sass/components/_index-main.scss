@@ -77,10 +77,11 @@
                         p{
                             position: absolute;
                             z-index: 1;
-                            font-size: fs.$sm;
+                            font-size: 1.4rem;
                             line-height: 1.5rem;
                             color: c.$third-color;;
                             padding: 15px;
+                            text-shadow: 1px 0px c.$primary-color;
                         }
 
                         img{
