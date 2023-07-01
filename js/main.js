@@ -1,35 +1,10 @@
 //main.js
-import { getProducts } from "./products.js";
+import { getProducts } from "./data/products.js";
 
-// const list__track = document.querySelector('.main__banner_section__carousel__list__track');
-// const list__track__product = document.querySelector('.main__banner_section__carousel__list__track__product')
+let productos = await getProducts()
+    .then((APIproducts) => {return APIproducts})
+    .catch((err) => console.log(err));
 
+let assembleProducts = () => {
 
-
-// getProducts()
-//   .then(products => {
-//     console.log(products);
-//   })
-//   .catch(error => {
-//     console.error(error);
-//   });
-
-
-// function assembleProduct() {
-//     let allProducts = []
-
-//     getProducts()
-//         .then(products => {
-//             allProducts = products
-//         })
-//         .catch(error => {
-//             console.error(error);
-//         });
-
-
-//     console.log(allProducts)
-    
-// }
-
-// assembleProduct();
-
+}
