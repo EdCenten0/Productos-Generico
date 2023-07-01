@@ -1,13 +1,13 @@
 //Products.js
-import fetch from "node-fetch";
+
 
 const API = 'https://api.escuelajs.co/api/v1';
 
 function fetchData(urlAPI){
-    return fetch(urlAPI)
+    return window.fetch(urlAPI)
 }
 
-export function getProducts(){
+export async function getProducts(){
     return new Promise((resolve, reject) => {
         fetchData(`${API}/products`)
         .then((response) => response.json())
@@ -18,7 +18,7 @@ export function getProducts(){
 }
 
 
-export function getOneProduct(productId){
+export async function getOneProduct(productId){
     return new Promise((resolve, reject) => {
         fetchData(`${API}/products/${productId}`)
         .then((response) => response.json())
