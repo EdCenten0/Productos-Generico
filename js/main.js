@@ -42,7 +42,7 @@ function assembleProducts(){
 
 function assembleCategories(){
     for(let i = 0; i < 6; i++){
-        const list__track = document.querySelector('.main__banner_section__carousel__list__track');
+        const list__track = document.querySelector('.categories');
         const product = document.createElement('div');
         const product__container = document.createElement('div');
         const product__container__link = document.createElement('a');
