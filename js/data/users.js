@@ -19,13 +19,17 @@ export async function getOneUser(userId){
     return new Promise((resolve, reject) =>{
         fetchData(`${API}/users/${userId}`)
             .then((response) => response.json())
-            .then((user) => response(user))
+            .then((user) => resolve(user))
             .catch((err) => reject(err));
     });
 }
 
 
 
-getUsers()
-    .then((response) => console.log(response))
-    .catch((err) => console.log(err));
+// getUsers()
+//     .then((response) => console.log(response))
+//     .catch((err) => console.log(err));
+
+// getOneUser(1)
+//     .then((response) => console.log(response))
+//     .catch((err) => console.log(err))
