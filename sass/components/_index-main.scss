@@ -1,17 +1,40 @@
 @use '../variables/colors' as c;
 @use '../variables/font-sizes' as fs;
 
-.main_image{
-    position: absolute;
-    inset: 0 0 0 0;
-    width: 100vw;
-    height: 100vh;
-    filter: blur(2px) brightness(0.9) drop-shadow(16px 16px 20px blue);
-}
 
 .header {
     &__nav{
+        
         justify-content: center;
         margin-top: 2rem;
+        
     }
 }
+
+.main_image{
+    position: absolute;
+    z-index: -1;
+    inset: 0 0 0 0;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(2px) brightness(0.9) drop-shadow(16px 16px 20px #c7c7c7);
+    
+}
+
+.main{
+    
+    &__container{
+        
+        &__synopsis{
+            p:nth-child(1){
+                
+            }
+
+            p:nth-child(2){
+                font-size: fs.$lg;
+                width: 50%;
+            }
+        }
+    }
+}
+
