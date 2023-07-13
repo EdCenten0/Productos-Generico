@@ -8,8 +8,9 @@
 
 <div style="">
     <h2>Screen Behavior</h2>
-    <div>
-        <h4>Desktop</h4>
+    <h4>Desktop</h4>
+    <div style="display:flex; justify-content:space-between; align-items:center;">
         <img src="https://github.com/EdCenten0/Imgs/blob/master/FakeStore%20(Productos-generico)/Desktop%201.jpeg" alt="desktop"/>
+        <img src="https://github.com/EdCenten0/Imgs/blob/master/FakeStore%20(Productos-generico)/Desktop%202.jpeg" alt="desktop"/>
     </div>
 </div>
