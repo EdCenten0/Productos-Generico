@@ -1,3 +1,4 @@
+@use '../mixins/media_queries' as mq;
 @use '../variables/font-sizes' as fs;
 @use '../variables/colors' as c;
 
@@ -18,7 +19,11 @@
         transition: all 0.5s ease-in;
 
         .header__nav{      
-            margin: 0.5rem;
+            margin: .5rem 0;
+
+            @include mq.tablet{
+                margin: 2rem 0 0 0;
+            }
         }
 
         .header__nav__name p{
@@ -48,10 +53,21 @@
         margin: 0 2rem;
         transition: all 1s ease-in;
 
+        @include mq.tablet{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+
         &__list{
             display: flex;
             padding: 0;
             margin: 0;
+
             
             &__element{
                 list-style: none;
@@ -91,6 +107,10 @@
         }
 
         &__name{
+            @include mq.tablet{
+                grid-row: 1/2;
+            }
+
             p{
                 font-size: fs.$lg;
                 line-height: 0;
@@ -98,6 +118,7 @@
                 color: c.$primary-color;
                 cursor: pointer;
                 margin: 5px;
+                text-align: center;
             }
         }
 
@@ -108,19 +129,52 @@
             gap: 1rem;
             cursor: pointer;
 
+            
+
             &__account{
                 display: flex;
                 gap: 1rem;
+
+                @include mq.tablet{
+                    display: none;
+                }
                 
                 img{
                     transform: rotate(90deg);
-                    
                 }
             }
 
             &__logo{
+                position: relative;
                 img{
                     width: 2rem;
+                }
+
+                @include mq.tablet{
+                    position: absolute;
+                    inset: 0 0 0 95%;
+                }
+
+                @include mq.mobile{
+                    display: none;
+                }
+                
+
+                &__popup{
+                    background-color: c.$primary-color;
+                    position: absolute;
+                    border-radius: 12px 1px 12px 12px;
+                    border: 1px solid c.$black;
+                    padding: 1rem;
+                    right: 1px;
+                    top: 50px;
+                    cursor:default;
+
+                    & p:nth-child(2){
+                        color:c.$fourth-color;
+                        text-decoration:underline;
+                        cursor: pointer;
+                    }
                 }
             }
         }
